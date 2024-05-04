@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <title>Projeto Rachão</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-       body {
-    background-image: url('PAPEL_DE_PAREDE_PC-RACHA_DOS_CRIA.png');
+   <style>
+    body {
+    background-image: url('PAPEL\ DE\ PAREDE\ PC-RACHA\ DOS\ CRIA.png');
     background-repeat: no-repeat;
     background-size: cover; /* Cobrir toda a tela */
     background-position: center;
     background-attachment: fixed; /* Fixar a posição do papel de parede */
     margin: 0;
     padding: 0;
-    height: 100vh; /* Garante que o body ocupe toda a altura da janela de visualização */
 }
 
-html {
-    height: 100%; /* Garante que o html também ocupe toda a altura da janela de visualização */
+html,
+body {
+    height: 100%;
 }
 
 .menu {
@@ -81,7 +80,8 @@ html {
         margin-bottom: 10px; /* Adiciona um espaço maior entre os itens do menu */
     }
 }
-    </style>
+
+   </style>
 </head>
 
 <body>
@@ -91,21 +91,18 @@ html {
     </audio>
 
     <div class="menu">
-        <h1>⚽ RACHA DOS CRIAS ⚽</h1>
+        <h1> RACHA DOS CRIAS ⚽ </h1>
         <ul>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="#marcar-amistoso">Marcar Amistoso</a></li>
             <li><a href="#agenda">Agenda</a></li>
-            <li onclick="iniciarSom()"><a href="#agenda">Tocar Som</a></li>
+            <li onclick="iniciarSom()"><a href="#som">Tocar Som</a></li>
         </ul>
     </div>
 
-    <script>
-        function iniciarSom() {
-            var audio = document.getElementById("meuAudio");
-            audio.play();
-        }
+    <script src="script.js">
+      
     </script>
 </body>
 
