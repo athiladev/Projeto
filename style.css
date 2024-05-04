@@ -1,22 +1,74 @@
 body {
     background-image: url('PAPEL\ DE\ PAREDE\ PC-RACHA\ DOS\ CRIA.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /* Cobrir toda a tela */
+    background-position: center;
+    background-attachment: fixed; /* Fixar a posição do papel de parede */
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 .menu {
     position: absolute;
     background-color: rgb(255, 160, 0);
     width: 100%;
-    height: 10%;
-    top: -1px;
-    margin-left: -8px;
-
+    top: 0;
+    display: flex;
+    justify-content: space-between; /* Os itens do menu ficarão espaçados igualmente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens do menu sejam envolvidos (empilhados) quando não houver espaço suficiente */
+    padding: 10px; /* Adiciona um pouco de espaço entre o menu e a borda da tela */
+    box-sizing: border-box; /* Garante que o preenchimento seja incluído na largura total do elemento */
 }
 
 .menu h1 {
-    margin: 20px;
+    margin: 0;
     font-family: fantasy;
     color: white;
     font-weight: 500;
+    flex: 1; /* Ocupa todo o espaço disponível restante */
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Permite que os itens do menu sejam exibidos em linha */
+}
+
+.menu li {
+    margin-right: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column; /* Empilha os itens do menu em coluna quando a tela é estreita */
+        align-items: flex-start; /* Alinha os itens do menu à esquerda */
+    }
+
+    .menu h1 {
+        margin-bottom: 10px; /* Adiciona um espaço entre o título do menu e os itens do menu */
+    }
+
+    .menu li {
+        margin-right: 0; /* Remove a margem à direita dos itens do menu */
+        margin-bottom: 10px; /* Adiciona um espaço maior entre os itens do menu */
+    }
 }
