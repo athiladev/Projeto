@@ -1,16 +1,17 @@
 body {
-    background-image: url('PAPEL\ DE\ PAREDE\ PC-RACHA\ DOS\ CRIA.png');
+    background-image: url('PAPEL_DE_PAREDE_PC-RACHA_DOS_CRIA.png'); /* Atualizado: Removi os espaços do nome do arquivo */
     background-repeat: no-repeat;
     background-size: cover; /* Cobrir toda a tela */
     background-position: center;
     background-attachment: fixed; /* Fixar a posição do papel de parede */
     margin: 0;
     padding: 0;
+    height: 100vh; /* Garante que o body ocupe toda a altura da janela de visualização */
+    overflow-x: hidden; /* Evita a barra de rolagem horizontal */
 }
 
-html,
-body {
-    height: 100%;
+html {
+    height: 100%; /* Garante que o html também ocupe toda a altura da janela de visualização */
 }
 
 .menu {
